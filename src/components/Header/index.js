@@ -1,10 +1,12 @@
 import React from 'react'
+import NavbarTop from '../NavbarTop'
+import './index.css';
 
 function Header() {
     return (
-        <>
-            hello
-        </>
+        <div className="header">
+            <NavbarTop/>
+        </div>
     )
 }
 

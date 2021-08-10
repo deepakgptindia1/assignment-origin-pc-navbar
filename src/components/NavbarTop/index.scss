@@ -1,0 +1,48 @@
+$text-color:#b0b1b6;
+$text-color-hover:#fafafa;
+
+.navbar-top{
+    background: #34363C;
+    margin:auto;
+    height: 40px;
+    @media (max-width:960px) {
+        display: none;
+        
+    }
+}
+
+.navbar-top-container{
+    background: inherit;
+    width: 900px;
+    margin:auto;
+    height: inherit;
+    // border:1px solid red;
+    //todo to delete border.
+    display: flex;
+    justify-content: space-between;
+    ul{
+        display: flex;
+        align-items: center;
+        color:$text-color;
+        font-size: 13px;
+        list-style: none;
+        padding-left:0;
+        a{
+            text-decoration: none;
+            transition: 200ms;
+
+            color:$text-color;
+            &:hover{
+                color:$text-color-hover;
+            }
+        }
+
+        li{
+            padding:0 7px;
+            i{
+                margin-right: 2px;
+            }
+            
+        }
+    }
+}
