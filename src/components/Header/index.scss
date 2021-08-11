@@ -3,5 +3,9 @@
     height: 100px;
     background: black;
     font-family: "ff-basic-gothic-pro",sans-serif;
+    transition: 500ms;
+    @media (max-width:960px) {
+        transform:translateY(-40px);
+    }
     
 }

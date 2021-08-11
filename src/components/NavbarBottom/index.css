@@ -6,7 +6,7 @@
 
 .navbar-bottom-container {
   background: inherit;
-  width: 900px;
+  width: 1400px;
   margin: auto;
   height: inherit;
   display: -webkit-box;
@@ -17,6 +17,25 @@
           justify-content: space-between;
 }
 
+@media (max-width: 1410px) {
+  .navbar-bottom-container {
+    width: 1110px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar-bottom-container {
+    width: 960px;
+  }
+}
+
+@media (max-width: 960px) {
+  .navbar-bottom-container {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
 .navbar-bottom-container ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,10 +44,18 @@
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   list-style: none;
   padding-left: 0;
+}
+
+@media (min-width: 960px) {
+  .navbar-bottom-container ul {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
 }
 
 .navbar-bottom-container ul li {
@@ -52,8 +79,37 @@
   padding: 30px 10px;
 }
 
+@media (max-width: 960px) {
+  .navbar-bottom-container ul li:not(.brand-logo) {
+    padding: 15px 10px;
+  }
+}
+
 .navbar-bottom-container ul li:hover .dropdown {
   display: block;
+}
+
+@media (max-width: 960px) {
+  .navbar-bottom-container ul li {
+    font-size: 14px;
+  }
+}
+
+.hamburger {
+  font-size: 22px !important;
+  display: none !important;
+}
+
+@media (max-width: 960px) {
+  .hamburger {
+    display: block !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .signIn {
+    display: none !important;
+  }
 }
 
 .brand-logo {
@@ -62,9 +118,30 @@
   padding: 0;
 }
 
+@media (max-width: 1200px) {
+  .brand-logo {
+    width: 50px;
+    content: url("https://cdn.originpc.com/img/origin-o-logo.svg");
+  }
+}
+
 @media (max-width: 960px) {
   .brand-logo {
-    content: url("https://cdn.originpc.com/img/origin-o-logo.svg");
+    width: 50px;
+    -webkit-transform: translateX(25px);
+            transform: translateX(25px);
+  }
+}
+
+@media (max-width: 960px) {
+  .container-left {
+    width: 50%;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -75,10 +152,10 @@
 .dropdown {
   width: 200px;
   height: auto;
-  background: #1E1F24;
+  background: #1e1f24;
   position: absolute;
   top: 100px;
-  border: 1px solid #34363C;
+  border: 1px solid #34363c;
   display: none;
 }
 
@@ -104,14 +181,77 @@
 }
 
 .dropdown ul li:hover {
-  background-color: #34363C;
+  background-color: #34363c;
 }
 
 .dropdown ul li:hover .sub-sidemenu {
   display: block;
 }
 
-.dropdown .govt:hover .sub-sidemenu-details {
+@media (max-width: 960px) {
+  .dropdown {
+    position: relative;
+    top: 10px;
+    width: 100%;
+  }
+  .dropdown ul {
+    width: 100%;
+    display: block;
+  }
+  .dropdown ul li {
+    position: relative;
+    width: 100%;
+  }
+  .dropdown ul li:hover .sub-sidemenu {
+    display: none;
+  }
+}
+
+.menu-item {
+  display: none !important;
+}
+
+@media (max-width: 960px) {
+  .menu-item {
+    position: absolute;
+    width: 100%;
+    padding: 0 20px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin: 0;
+    display: none !important;
+    background: #000000;
+    top: 100px;
+    left: 0;
+  }
+  .menu-item li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .menu-item li .icon i {
+    position: relative;
+    top: -3px;
+  }
+}
+
+.show {
+  display: block !important;
+}
+
+.govt:hover .sub-sidemenu-details {
   display: block;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -124,18 +264,24 @@
       justify-content: space-around;
 }
 
-.dropdown .sub-sidemenu {
+@media (max-width: 960px) {
+  .govt:hover .sub-sidemenu-details {
+    display: none;
+  }
+}
+
+.sub-sidemenu {
   width: 200px;
   height: auto;
-  background: #1E1F24;
+  background: #1e1f24;
   position: absolute;
   top: -1px;
   left: 199px;
-  border: 1px solid #34363C;
+  border: 1px solid #34363c;
   display: none;
 }
 
-.dropdown .sub-sidemenu ul {
+.sub-sidemenu ul {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -145,13 +291,13 @@
           align-items: flex-start;
 }
 
-.dropdown .sub-sidemenu ul li {
+.sub-sidemenu ul li {
   padding: 0;
   padding: 30px 10px;
   width: 100%;
 }
 
-.dropdown .sub-sidemenu ul li:hover .sub-sidemenu-details {
+.sub-sidemenu ul li:hover .sub-sidemenu-details {
   display: block;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,22 +310,28 @@
       justify-content: space-around;
 }
 
-.dropdown .last5 {
-  top: 300.8px;
+@media (max-width: 960px) {
+  .sub-sidemenu ul li:hover .sub-sidemenu-details {
+    display: none;
+  }
 }
 
-.dropdown .last6 {
-  top: 376px;
+.last5 {
+  top: 307.2px;
 }
 
-.dropdown .sub-sidemenu-details {
+.last6 {
+  top: 384px;
+}
+
+.sub-sidemenu-details {
   width: 450px;
   height: 520px;
-  background: #1E1F24;
+  background: #1e1f24;
   position: absolute;
   top: -1px;
   left: 199px;
-  border: 1px solid #34363C;
+  border: 1px solid #34363c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,24 +350,24 @@
   color: #fff;
 }
 
-.dropdown .sub-sidemenu-details h2 {
+.sub-sidemenu-details h2 {
   font-size: 16px;
   font-weight: 400;
 }
 
-.dropdown .sub-sidemenu-details img {
+.sub-sidemenu-details img {
   width: 370px;
 }
 
-.dropdown .sub-sidemenu-details .details-bottom h2 i {
+.sub-sidemenu-details .details-bottom h2 i {
   color: #fb3;
 }
 
-.dropdown .sub-sidemenu-details .details-bottom .details-bottom-button {
+.sub-sidemenu-details .details-bottom .details-bottom-button {
   margin-top: 10px;
 }
 
-.dropdown .sub-sidemenu-details .details-bottom .details-bottom-button button {
+.sub-sidemenu-details .details-bottom .details-bottom-button button {
   border: 2px solid #b0b1b6;
   background: transparent;
   padding: 12px 17px;
@@ -227,8 +379,8 @@
   cursor: pointer;
 }
 
-.dropdown .sub-sidemenu-details .details-bottom .details-bottom-button button:first-child {
-  background: #E31B21;
+.sub-sidemenu-details .details-bottom .details-bottom-button button:first-child {
+  background: #e31b21;
   border: none;
   color: #fff;
 }

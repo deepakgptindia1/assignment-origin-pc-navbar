@@ -3,15 +3,21 @@
     background: #34363C;
     margin:auto;
     height: 40px;
-    @media (max-width:960px) {
-        display: none;
-        
-    }
+    
 }
 
 .navbar-top-container{
     background: inherit;
-    width: 900px;
+    width: 1400px;
+    @media (max-width:1410px) {
+        width: 1110px;
+    }
+    @media (max-width:1200px) {
+        width: 960px;
+    }
+    @media (max-width:960px) {
+        width:960px;
+    }
     margin:auto;
     height: inherit;
     // border:1px solid red;

@@ -3,5 +3,14 @@
   height: 100px;
   background: black;
   font-family: "ff-basic-gothic-pro",sans-serif;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+@media (max-width: 960px) {
+  .header {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
 }
 /*# sourceMappingURL=index.css.map */
