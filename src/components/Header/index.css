@@ -5,6 +5,7 @@
   font-family: "ff-basic-gothic-pro",sans-serif;
   -webkit-transition: 500ms;
   transition: 500ms;
+  position: fixed;
 }
 
 @media (max-width: 960px) {

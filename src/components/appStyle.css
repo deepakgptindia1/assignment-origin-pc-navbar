@@ -3,4 +3,15 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+.body {
+  width: 100%;
+  top: 100px;
+}
+
+.body img {
+  margin-top: 100px;
+  width: 100%;
+  padding: 50px;
+}
 /*# sourceMappingURL=appStyle.css.map */

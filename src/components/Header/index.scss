@@ -4,6 +4,7 @@
     background: black;
     font-family: "ff-basic-gothic-pro",sans-serif;
     transition: 500ms;
+    position: fixed;
     @media (max-width:960px) {
         transform:translateY(-40px);
     }

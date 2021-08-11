@@ -6,7 +6,7 @@ const SubSideMenu=({name,laptop_name,category, h, w, d, src, cost, emi, last5, l
     const renderLi=()=>{
         return name.map((item)=>{
             return (
-                <li>
+                <li key={item.name}>
                     {item.name}{
                     item.laptop_name?<SideMenuDetails name={item.laptop_name} category={item.category} h={item.h} w={item.w} d={item.d} src={item.src} cost={item.cost} emi={item.emi}/>:null
                     

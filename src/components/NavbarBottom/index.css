@@ -68,7 +68,12 @@
 }
 
 .navbar-bottom-container ul li i {
-  margin-left: 4px;
+  margin-left: 5px;
+}
+
+.navbar-bottom-container ul li .icon i {
+  position: relative;
+  top: -2px;
 }
 
 .navbar-bottom-container ul li:not(.highlight):hover {
@@ -106,6 +111,10 @@
   }
 }
 
+.signIn {
+  padding-right: 3px;
+}
+
 @media (max-width: 960px) {
   .signIn {
     display: none !important;
@@ -116,6 +125,7 @@
   width: 150px;
   height: 40px;
   padding: 0;
+  margin-right: 20px;
 }
 
 @media (max-width: 1200px) {
@@ -351,8 +361,9 @@
 }
 
 .sub-sidemenu-details h2 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
+  padding: 0 17px;
 }
 
 .sub-sidemenu-details img {
@@ -361,6 +372,8 @@
 
 .sub-sidemenu-details .details-bottom h2 i {
   color: #fb3;
+  position: relative;
+  left: 5px;
 }
 
 .sub-sidemenu-details .details-bottom .details-bottom-button {
@@ -377,11 +390,27 @@
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  -webkit-transition: 200ms;
+  transition: 200ms;
 }
 
-.sub-sidemenu-details .details-bottom .details-bottom-button button:first-child {
-  background: #e31b21;
+.sub-sidemenu-details .details-bottom .details-bottom-button button:hover {
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.sub-sidemenu-details .details-bottom .details-bottom-button .button-red {
+  background: #cc181e;
   border: none;
   color: #fff;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.sub-sidemenu-details .details-bottom .details-bottom-button .button-red:hover {
+  background: #e31b21;
+  border: none;
 }
 /*# sourceMappingURL=index.css.map */
